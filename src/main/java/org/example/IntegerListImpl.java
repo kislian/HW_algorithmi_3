@@ -168,10 +168,10 @@ public class IntegerListImpl implements IntegerList {
         }
     }
 
-    private void sort(Integer[] arr) {
+   public void sort(Integer[] arr) {
         quickSort(arr, 0, arr.length - 1);
     }
-    private void quickSort(Integer[] arr, int begin, int end) {
+    public void quickSort(Integer[] arr, int begin, int end) {
         if (begin < end) {
             int partitionIndex = partition(arr, begin, end);
 

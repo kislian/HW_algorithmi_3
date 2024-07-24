@@ -14,6 +14,11 @@ public class IntegerListImplTest {
     private IntegerListImpl integerList;
     private SortIntegerMassiv sortIntegerMassiv;
     public int[] actualMasssivBeforeSort;
+    public Integer[] actualMasssivSort;
+    public Integer[] extentedMasssivSort=new Integer[]{
+            1, 2, 3, 4, 5,
+    };
+
     public int[] expectedMasssivAfterSort = new int[]{
             1, 2, 3, 4, 5,
     };
@@ -24,7 +29,10 @@ public class IntegerListImplTest {
         actualMasssivBeforeSort = new int[]{
                 2, 4, 1, 5, 3,
         };
-    }
+        actualMasssivSort= new Integer[]{
+         4,2,1,3,5
+        };
+        }
     @Test
     public void testAdd() {
         integerList.add(1);
@@ -193,6 +201,7 @@ public class IntegerListImplTest {
     }
     @Test
     void testSort(){
-
+    integerList.sort(actualMasssivSort);
+        assertArrayEquals( extentedMasssivSort,actualMasssivSort);
     }
 }
